@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function() {
     Route::get('book/create', 'Admin\BookController@add');
 });
+
+Route::get('admin',function() {
+    return view('adminlte');
+});
+
+Route::get('/', 'BookController@index');
